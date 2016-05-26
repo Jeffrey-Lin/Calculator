@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var display: UILabel!
-    @IBOutlet weak var zeroButton: UIButton!
     
     private let brain = CalculatorBrain()
     private var userIsInTheMiddleOfTyping = false
@@ -24,13 +23,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func touchDigit(sender: UIButton) {
-        var digit = sender.currentTitle!
+        let digit = sender.currentTitle!
+        
+        if userIsInTheMiddleOfTyping {
+            let textCurrentlyInDisplay = display.text!
+            display.text = textCurrentlyInDisplay + digit
+        } else {
+            display.text = digit
+        }
+        userIsInTheMiddleOfTyping = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction private func performOperation(sender: UIButton) {
+        if userIsInTheMiddleOfTyping {
+            brain.setOperand(displayValue)
+            userIsInTheMiddleOfTyping = false
+        }
         
-        zeroButton.titleLabel?.hidden = true
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(mathematicalSymbol)
+        }
+        displayValue = brain.result
     }
 }
 
