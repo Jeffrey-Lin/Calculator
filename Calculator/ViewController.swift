@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet private weak var display: UILabel!
-    
+    @IBOutlet weak var display: ResultsLabelViewController!
+        
     private let brain = CalculatorBrain()
     private var userIsInTheMiddleOfTyping = false
     private var displayValue: Double {

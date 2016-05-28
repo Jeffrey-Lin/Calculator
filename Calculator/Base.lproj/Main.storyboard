@@ -53,6 +53,14 @@
                                                         <state key="normal" title="AC">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1I-Hr-Tpr">
                                                         <rect key="frame" x="150" y="0.0" width="150" height="84"/>
@@ -292,10 +300,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Qm-PO-0Uw" secondAttribute="bottom" id="tfx-Ep-e1Z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="VBD-bn-Ehe" id="TOg-NY-23V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="577"/>
+            <point key="canvasLocation" x="873" y="525"/>
         </scene>
     </scenes>
 </document>
