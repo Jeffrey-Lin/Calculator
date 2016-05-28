@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         
     private let brain = CalculatorBrain()
     private var userIsInTheMiddleOfTyping = false
+    private var userAlreadyEnteredDecimal = false
     private var displayValue: Double {
         get {
             return Double(display.text!)!
@@ -26,8 +27,7 @@ class ViewController: UIViewController {
         let digit = sender.currentTitle!
         
         if userIsInTheMiddleOfTyping {
-            let textCurrentlyInDisplay = display.text!
-            display.text = textCurrentlyInDisplay + digit
+            display.text = display.text! + digit
         } else {
             display.text = digit
         }
@@ -38,12 +38,31 @@ class ViewController: UIViewController {
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
             userIsInTheMiddleOfTyping = false
+            userAlreadyEnteredDecimal = false
         }
         
         if let mathematicalSymbol = sender.currentTitle {
             brain.performOperation(mathematicalSymbol)
         }
         displayValue = brain.result
+    }
+    
+    @IBAction func addDecimal(sender: UIButton) {
+        let decimal = sender.currentTitle!
+        
+        if !userAlreadyEnteredDecimal {
+            if userIsInTheMiddleOfTyping {
+                display.text = display.text! + decimal
+            } else {
+                display.text = "0" + decimal
+            }
+        }
+        userIsInTheMiddleOfTyping = true
+        userAlreadyEnteredDecimal = true
+    }
+    
+    @IBAction func clearDisplay(sender: UIButton) {
+        displayValue = 0
     }
 }
 
