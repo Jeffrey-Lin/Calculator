@@ -10,7 +10,7 @@ import UIKit
 
 class ResultsLabelViewController: UILabel {
     override func drawTextInRect(rect: CGRect) {
-        let insets = UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 5)
+        let insets = UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 20)
         super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
     }
 }
