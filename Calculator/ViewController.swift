@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var display: ResultsLabelViewController!
+    @IBOutlet weak var landscapeView: UIView!
         
     private let brain = CalculatorBrain()
     private var userIsInTheMiddleOfTyping = false
-    private var userAlreadyEnteredDecimal = false
     private var displayValue: Double {
         get {
             return Double(display.text!)!
@@ -38,9 +38,7 @@ class ViewController: UIViewController {
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
             userIsInTheMiddleOfTyping = false
-            userAlreadyEnteredDecimal = false
         }
-        
         if let mathematicalSymbol = sender.currentTitle {
             brain.performOperation(mathematicalSymbol)
         }
@@ -50,19 +48,33 @@ class ViewController: UIViewController {
     @IBAction func addDecimal(sender: UIButton) {
         let decimal = sender.currentTitle!
         
-        if !userAlreadyEnteredDecimal {
-            if userIsInTheMiddleOfTyping {
-                display.text = display.text! + decimal
-            } else {
-                display.text = "0" + decimal
-            }
+        if display.text?.rangeOfString(decimal) == nil {
+            display.text = display.text! + decimal
+        } else if !userIsInTheMiddleOfTyping {
+            display.text = "0" + decimal
         }
         userIsInTheMiddleOfTyping = true
-        userAlreadyEnteredDecimal = true
+    }
+    @IBAction func clearDisplay(sender: UIButton) {
+        display.text = "0"
     }
     
-    @IBAction func clearDisplay(sender: UIButton) {
-        displayValue = 0
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        setOrientation()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setOrientation()
+    }
+    
+    private func setOrientation() {
+        if UIDevice.currentDevice().orientation.isLandscape {
+            landscapeView.hidden = false
+        } else {
+            landscapeView.hidden = true
+        }
     }
 }
 
