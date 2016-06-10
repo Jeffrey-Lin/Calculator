@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var display: ResultsLabelViewController!
+    @IBOutlet weak var display: ResultsLabel!
+    @IBOutlet weak var landscapeDisplay: ResultsLabel!
     @IBOutlet weak var landscapeView: UIView!
         
     private let brain = CalculatorBrain()
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
         }
         set {
             display.text = String(newValue)
+            landscapeDisplay.text = String(newValue)
         }
     }
     
@@ -28,8 +30,10 @@ class ViewController: UIViewController {
         
         if userIsInTheMiddleOfTyping {
             display.text = display.text! + digit
+            landscapeDisplay.text = landscapeDisplay.text! + digit
         } else {
             display.text = digit
+            landscapeDisplay.text = digit
         }
         userIsInTheMiddleOfTyping = true
     }
@@ -50,13 +54,16 @@ class ViewController: UIViewController {
         
         if display.text?.rangeOfString(decimal) == nil {
             display.text = display.text! + decimal
+            landscapeDisplay.text = landscapeDisplay.text! + decimal
         } else if !userIsInTheMiddleOfTyping {
             display.text = "0" + decimal
+            landscapeDisplay.text = "0" + decimal
         }
         userIsInTheMiddleOfTyping = true
     }
     @IBAction func clearDisplay(sender: UIButton) {
         display.text = "0"
+        landscapeDisplay.text = "0"
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

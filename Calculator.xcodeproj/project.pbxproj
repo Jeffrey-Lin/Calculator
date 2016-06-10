@@ -15,7 +15,7 @@
 		0057E4C11CE2B594003885C4 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057E4C01CE2B594003885C4 /* CalculatorTests.swift */; };
 		0057E4CC1CE2B594003885C4 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057E4CB1CE2B594003885C4 /* CalculatorUITests.swift */; };
 		00D8318D1CE5728600789E1B /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D8318C1CE5728600789E1B /* CalculatorBrain.swift */; };
-		421B4B001CF89E3E0002DB94 /* ResultsLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B4AFF1CF89E3E0002DB94 /* ResultsLabelViewController.swift */; };
+		421B4B001CF89E3E0002DB94 /* ResultsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B4AFF1CF89E3E0002DB94 /* ResultsLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		0057E4CB1CE2B594003885C4 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		0057E4CD1CE2B594003885C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00D8318C1CE5728600789E1B /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
-		421B4AFF1CF89E3E0002DB94 /* ResultsLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsLabelViewController.swift; sourceTree = "<group>"; };
+		421B4AFF1CF89E3E0002DB94 /* ResultsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				0057E4AD1CE2B594003885C4 /* ViewController.swift */,
-				421B4AFF1CF89E3E0002DB94 /* ResultsLabelViewController.swift */,
+				421B4AFF1CF89E3E0002DB94 /* ResultsLabel.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421B4B001CF89E3E0002DB94 /* ResultsLabelViewController.swift in Sources */,
+				421B4B001CF89E3E0002DB94 /* ResultsLabel.swift in Sources */,
 				00D8318D1CE5728600789E1B /* CalculatorBrain.swift in Sources */,
 				0057E4AE1CE2B594003885C4 /* ViewController.swift in Sources */,
 				0057E4AC1CE2B594003885C4 /* AppDelegate.swift in Sources */,

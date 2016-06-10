@@ -28,7 +28,7 @@
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VBD-bn-Ehe" customClass="ResultsLabelViewController" customModule="Calculator" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VBD-bn-Ehe" customClass="ResultsLabel" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="600" height="90"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
@@ -307,7 +307,7 @@
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-uA-Zx5" customClass="ResultsLabelViewController" customModule="Calculator" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-uA-Zx5" userLabel="LandscapeDisplay" customClass="ResultsLabel" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="60" width="600" height="60"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -397,7 +397,7 @@
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aIq-Hs-voW"/>
+                                                                    <action selector="clearDisplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aG1-wY-6FS"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-wJ-MHn">
@@ -923,6 +923,7 @@
                     </view>
                     <connections>
                         <outlet property="display" destination="VBD-bn-Ehe" id="TOg-NY-23V"/>
+                        <outlet property="landscapeDisplay" destination="s8w-uA-Zx5" id="gsl-Qo-fSn"/>
                         <outlet property="landscapeView" destination="kTN-ZJ-JOu" id="ENz-HZ-tqr"/>
                     </connections>
                 </viewController>
