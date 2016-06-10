@@ -16,6 +16,7 @@
 		0057E4CC1CE2B594003885C4 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057E4CB1CE2B594003885C4 /* CalculatorUITests.swift */; };
 		00D8318D1CE5728600789E1B /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D8318C1CE5728600789E1B /* CalculatorBrain.swift */; };
 		421B4B001CF89E3E0002DB94 /* ResultsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421B4AFF1CF89E3E0002DB94 /* ResultsLabel.swift */; };
+		42FE30B41D0B1ED4008A31FD /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FE30B31D0B1ED4008A31FD /* CalculatorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0057E4CD1CE2B594003885C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00D8318C1CE5728600789E1B /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		421B4AFF1CF89E3E0002DB94 /* ResultsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsLabel.swift; sourceTree = "<group>"; };
+		42FE30B31D0B1ED4008A31FD /* CalculatorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				0057E4AD1CE2B594003885C4 /* ViewController.swift */,
 				421B4AFF1CF89E3E0002DB94 /* ResultsLabel.swift */,
+				42FE30B31D0B1ED4008A31FD /* CalculatorButton.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				00D8318D1CE5728600789E1B /* CalculatorBrain.swift in Sources */,
 				0057E4AE1CE2B594003885C4 /* ViewController.swift in Sources */,
 				0057E4AC1CE2B594003885C4 /* AppDelegate.swift in Sources */,
+				42FE30B41D0B1ED4008A31FD /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
