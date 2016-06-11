@@ -441,7 +441,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-fh-hrf" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                                                 <state key="normal" title="2nd">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -475,7 +475,7 @@
                                                                 <rect key="frame" x="180" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                                                <state key="normal" title="x^y">
+                                                                <state key="normal" title="xʸ">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
@@ -486,7 +486,7 @@
                                                                 <rect key="frame" x="240" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                                                <state key="normal" title="e^x">
+                                                                <state key="normal" title="eˣ">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
@@ -496,8 +496,8 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tt-95-zXO" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                                 <rect key="frame" x="300" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                                                <state key="normal" title="10^x">
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                                <state key="normal" title="10ˣ">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
@@ -556,8 +556,8 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJn-QE-jpL" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                                                <state key="normal" title="1 / x">
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                                <state key="normal" title="¹ ⁄ₓ">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
@@ -568,7 +568,7 @@
                                                                 <rect key="frame" x="60" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                                                <state key="normal" title="√">
+                                                                <state key="normal" title="²√x">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
@@ -579,7 +579,7 @@
                                                                 <rect key="frame" x="120" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                                                <state key="normal" title="∛x">
+                                                                <state key="normal" title="³√x">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
@@ -786,7 +786,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-2W-vLY" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
                                                                 <state key="normal" title="Rad">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -925,6 +925,7 @@
                         <outlet property="display" destination="VBD-bn-Ehe" id="TOg-NY-23V"/>
                         <outlet property="landscapeDisplay" destination="s8w-uA-Zx5" id="gsl-Qo-fSn"/>
                         <outlet property="landscapeView" destination="kTN-ZJ-JOu" id="ENz-HZ-tqr"/>
+                        <outlet property="xy" destination="z7F-Ry-G9k" id="4ug-XK-f7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
