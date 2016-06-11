@@ -863,7 +863,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lox-t4-22d" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                                 <rect key="frame" x="420" y="0.0" width="60" height="96"/>
                                                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                                 <state key="normal" title=".">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
@@ -925,7 +925,6 @@
                         <outlet property="display" destination="VBD-bn-Ehe" id="TOg-NY-23V"/>
                         <outlet property="landscapeDisplay" destination="s8w-uA-Zx5" id="gsl-Qo-fSn"/>
                         <outlet property="landscapeView" destination="kTN-ZJ-JOu" id="ENz-HZ-tqr"/>
-                        <outlet property="xy" destination="z7F-Ry-G9k" id="4ug-XK-f7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

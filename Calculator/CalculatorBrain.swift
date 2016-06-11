@@ -25,7 +25,26 @@ class CalculatorBrain {
     private var pendingInfo: PendingBinaryOperationInfo?
     private var operations = [
         "π": Operation.constant(M_PI),
-        "√": Operation.unaryOperation(sqrt),
+        "e": Operation.constant(M_E),
+        "%": Operation.unaryOperation({ $0/100 }),
+        "ᐩ⁄-": Operation.unaryOperation({ -$0 }),
+        "x²": Operation.unaryOperation({ pow($0, 2) }),
+        "x³": Operation.unaryOperation({ pow($0, 3) }),
+        "eˣ": Operation.unaryOperation({ pow(M_E, $0) }),
+        "10ˣ": Operation.unaryOperation({ pow(10, $0) }),
+        "¹ ⁄ₓ": Operation.unaryOperation({ 1/$0 }),
+        "²√x": Operation.unaryOperation(sqrt),
+        "³√x": Operation.unaryOperation({ pow($0, 1/3) }),
+        "ln": Operation.unaryOperation({ log($0)/log(M_E) }),
+        "log₁₀": Operation.unaryOperation(log10),
+        // factorial here
+        "sin": Operation.unaryOperation(sin), // radians
+        "cos": Operation.unaryOperation(cos), // radians
+        "tan": Operation.unaryOperation(tan), // radians
+        "sinh": Operation.unaryOperation(sinh), // radians
+        "cosh": Operation.unaryOperation(cosh), // radians
+        "tanh": Operation.unaryOperation(tanh), // radians
+        "Rand": Operation.unaryOperation({ _ in Double(arc4random()) / Double(UINT32_MAX) }),
         "×": Operation.binaryOperation(*),
         "÷": Operation.binaryOperation(/),
         "−": Operation.binaryOperation(-),
