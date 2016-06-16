@@ -9,12 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var display: ResultsLabel!
-    @IBOutlet weak var landscapeDisplay: ResultsLabel!
-    @IBOutlet weak var landscapeView: UIView!
-        
+    @IBOutlet private weak var display: ResultsLabel!
+    @IBOutlet private weak var landscapeDisplay: ResultsLabel!
+    @IBOutlet private weak var landscapeView: UIView!
+    
+    // Buttons with 2nd view.
+    @IBOutlet private weak var eˣ: CalculatorButton!
+    @IBOutlet private weak var tenˣ: CalculatorButton!
+    @IBOutlet private weak var ln: CalculatorButton!
+    @IBOutlet private weak var log₁₀: CalculatorButton!
+    @IBOutlet private weak var sin: CalculatorButton!
+    @IBOutlet private weak var cos: CalculatorButton!
+    @IBOutlet private weak var tan: CalculatorButton!
+    @IBOutlet private weak var sinh: CalculatorButton!
+    @IBOutlet private weak var cosh: CalculatorButton!
+    @IBOutlet private weak var tanh: CalculatorButton!
+    
     private let brain = CalculatorBrain()
     private var userIsInTheMiddleOfTyping = false
+    private var is2ndButtonPressed = false
     private var displayValue: Double {
         get {
             return Double(display.text!)!
@@ -49,7 +62,7 @@ class ViewController: UIViewController {
         displayValue = brain.result
     }
     
-    @IBAction func addDecimal(sender: UIButton) {
+    @IBAction private func addDecimal(sender: UIButton) {
         let decimal = sender.currentTitle!
         
         if display.text?.rangeOfString(decimal) == nil {
@@ -61,9 +74,38 @@ class ViewController: UIViewController {
         }
         userIsInTheMiddleOfTyping = true
     }
-    @IBAction func clearDisplay(sender: UIButton) {
+    @IBAction private func clearDisplay(sender: UIButton) {
         display.text = "0"
         landscapeDisplay.text = "0"
+        userIsInTheMiddleOfTyping = false
+    }
+    
+    @IBAction private func view2nd(sender: UIButton) {
+        is2ndButtonPressed = !is2ndButtonPressed
+        
+        if is2ndButtonPressed {
+            eˣ.setTitle("yˣ", forState: .Normal)
+            tenˣ.setTitle("2ˣ", forState: .Normal)
+            ln.setTitle("logᵧ", forState: .Normal)
+            log₁₀.setTitle("log₂", forState: .Normal)
+            sin.setTitle("sin⁻¹", forState: .Normal)
+            cos.setTitle("cos⁻¹", forState: .Normal)
+            tan.setTitle("tan⁻¹", forState: .Normal)
+            sinh.setTitle("sinh⁻¹", forState: .Normal)
+            cosh.setTitle("cosh⁻¹", forState: .Normal)
+            tanh.setTitle("tanh⁻¹", forState: .Normal)
+        } else {
+            eˣ.setTitle("eˣ", forState: .Normal)
+            tenˣ.setTitle("10ˣ", forState: .Normal)
+            ln.setTitle("ln", forState: .Normal)
+            log₁₀.setTitle("log₁₀", forState: .Normal)
+            sin.setTitle("sin", forState: .Normal)
+            cos.setTitle("cos", forState: .Normal)
+            tan.setTitle("tan", forState: .Normal)
+            sinh.setTitle("sinh", forState: .Normal)
+            cosh.setTitle("cosh", forState: .Normal)
+            tanh.setTitle("tanh", forState: .Normal)
+        }
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

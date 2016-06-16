@@ -37,7 +37,15 @@ class CalculatorBrain {
         "³√x": Operation.unaryOperation({ pow($0, 1/3) }),
         "ln": Operation.unaryOperation({ log($0)/log(M_E) }),
         "log₁₀": Operation.unaryOperation(log10),
-        // factorial here
+        "x!": Operation.unaryOperation({
+            var counter = Int($0)
+            var result = 1
+            while (counter > 0) {
+                result *= counter
+                counter -= 1
+            }
+            return Double(result)
+        }),
         "sin": Operation.unaryOperation(sin), // radians
         "cos": Operation.unaryOperation(cos), // radians
         "tan": Operation.unaryOperation(tan), // radians
@@ -49,6 +57,10 @@ class CalculatorBrain {
         "÷": Operation.binaryOperation(/),
         "−": Operation.binaryOperation(-),
         "+": Operation.binaryOperation(+),
+        "xʸ": Operation.binaryOperation({ pow($0, $1) }),
+        "ʸ√x": Operation.binaryOperation({ pow($0, 1/$1) }),
+        "EE": Operation.binaryOperation({ $0 * pow(10, $1) }),
+        "MU": Operation.binaryOperation({ $0 + $0 * ($1/100) }),
         "=": Operation.equals
     ]
     
