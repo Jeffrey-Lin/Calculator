@@ -112,10 +112,14 @@ class ViewController: UIViewController {
         setOrientation()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         
         setOrientation()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent        
     }
     
     private func setOrientation() {
