@@ -800,11 +800,11 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="97"/>
                                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
-                                                                <state key="normal" title="Rad">
+                                                                <state key="normal" title="Deg">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAl-NO-3x2"/>
+                                                                    <action selector="changeDegreesAndRadians:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJD-NS-6qp"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-DJ-4gB" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
@@ -937,8 +937,11 @@
                     <connections>
                         <outlet property="cos" destination="Ija-M4-mT5" id="FoF-y5-YR8"/>
                         <outlet property="cosh" destination="oXn-UX-rCs" id="1ci-MD-gJh"/>
+                        <outlet property="deg" destination="sBx-2W-vLY" id="Dr2-RK-Ndx"/>
+                        <outlet property="degRad" destination="5JT-ac-nZv" id="6Ip-kR-Fag"/>
                         <outlet property="display" destination="VBD-bn-Ehe" id="TOg-NY-23V"/>
                         <outlet property="eˣ" destination="fUo-EB-k0D" id="bwA-Cb-K8Y"/>
+                        <outlet property="history" destination="WY1-aY-5rP" id="hey-AE-XOf"/>
                         <outlet property="landscapeDisplay" destination="s8w-uA-Zx5" id="gsl-Qo-fSn"/>
                         <outlet property="landscapeView" destination="kTN-ZJ-JOu" id="ENz-HZ-tqr"/>
                         <outlet property="ln" destination="mPL-Zb-QQf" id="XhQ-qG-RZA"/>
@@ -952,7 +955,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573" y="405"/>
+            <point key="canvasLocation" x="129" y="438"/>
         </scene>
     </scenes>
 </document>

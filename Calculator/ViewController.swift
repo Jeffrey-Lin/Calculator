@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet private weak var display: ResultsLabel!
     @IBOutlet private weak var landscapeDisplay: ResultsLabel!
+    @IBOutlet private weak var history: ResultsLabel!
+    @IBOutlet private weak var degRad: ResultsLabel!
     @IBOutlet private weak var landscapeView: UIView!
     
     // Buttons with 2nd view.
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var sinh: CalculatorButton!
     @IBOutlet private weak var cosh: CalculatorButton!
     @IBOutlet private weak var tanh: CalculatorButton!
+    @IBOutlet private weak var deg: CalculatorButton!
     
     private let brain = CalculatorBrain()
     private var userIsInTheMiddleOfTyping = false
@@ -48,6 +51,8 @@ class ViewController: UIViewController {
             display.text = digit
             landscapeDisplay.text = digit
         }
+        
+        history.text = history.text! + " \(digit)"
         userIsInTheMiddleOfTyping = true
     }
     
@@ -58,6 +63,11 @@ class ViewController: UIViewController {
         }
         if let mathematicalSymbol = sender.currentTitle {
             brain.performOperation(mathematicalSymbol)
+            history.text = history.text! + " \(mathematicalSymbol)"
+            
+            if mathematicalSymbol == "=" {
+                history.text = history.text! + " \(brain.result)"
+            }
         }
         displayValue = brain.result
     }
@@ -77,6 +87,7 @@ class ViewController: UIViewController {
     @IBAction private func clearDisplay(sender: UIButton) {
         display.text = "0"
         landscapeDisplay.text = "0"
+        history.text = " "
         userIsInTheMiddleOfTyping = false
     }
     
@@ -106,6 +117,11 @@ class ViewController: UIViewController {
             cosh.setTitle("cosh", forState: .Normal)
             tanh.setTitle("tanh", forState: .Normal)
         }
+    }
+    
+    @IBAction func changeDegreesAndRadians(sender: UIButton) {
+        degRad.text = (degRad.text == "Deg" ? "Rad" : "Deg")
+        deg.setTitle(deg.currentTitle == "Deg" ? "Rad" : "Deg", forState: .Normal)
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

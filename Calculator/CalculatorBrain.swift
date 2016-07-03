@@ -23,8 +23,6 @@ class CalculatorBrain {
     
     private var accumulator = 0.0
     private var pendingInfo: PendingBinaryOperationInfo?
-    private var description = ""
-    private var isPartialResult = false
     private var operations = [
         "π": Operation.constant(M_PI),
         "e": Operation.constant(M_E),
@@ -105,10 +103,7 @@ class CalculatorBrain {
     private func executePendingBinaryOperation() {
         if let pending = pendingInfo {
             accumulator = pending.binaryFunction(pending.firstOperand, accumulator)
-            isPartialResult = false
             pendingInfo = nil
-        } else {
-            isPartialResult = true
         }
     }
 }
